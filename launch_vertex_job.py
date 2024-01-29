@@ -7,15 +7,15 @@ import json
 from google.cloud import aiplatform, storage
 from google.oauth2 import service_account
 
-PROJECT = "msdnn-lectures"
+PROJECT = "assignment-b-411820"
 REGION = "europe-west4"
-BUCKET = "gs://msindnn_staging"
+BUCKET = "gs://bucket_dagobert"
 EXPERIMENT = "msdnn-assignments"
 EXP_DESCRIPTION = "Assignments for MS in DNNs lecture"
 WANDB_KEY = json.load(open("wandb_key.json"))
 CREDENTIALS = service_account.Credentials.from_service_account_file("credentials.json")
 CONTAINER = "europe-docker.pkg.dev/vertex-ai/training/pytorch-gpu.1-13.py310:latest"
-N_GPUS = 1
+N_GPUS = 0
 
 aiplatform.init(
     # your Google Cloud Project ID or number
